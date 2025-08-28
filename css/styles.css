@@ -1,0 +1,64 @@
+*{
+    text-indent: 2px;
+}
+.body{
+    background-image: url('/images/tumblr_nqpijrft8o1qbmz7eo1_500_gif\ \(500×278\).gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    padding: 7% 12%;
+}
+.blocks{
+    width: 100%;
+    padding: 20px 0px;
+    border: 4px solid #FFAFE7;
+    border-radius: 39px;
+    background-color: white;
+    text-align: center; 
+}
+.toggle{
+    width: 60px;
+    height: 60px;
+    border: 4px solid #FFAFE7;
+    border-radius: 50px;
+    background-color: white;
+    text-align: center;
+    display: flex;
+    align-items: center !important;
+    justify-content: center;
+}
+.toggle img {
+    width: 50%;
+}
+@media screen and (max-width:767px) {
+    .blocks{
+    width: 100%;
+}
+.toggle{
+     width: 100%;
+}
+}
+
+.board{
+    min-height: 500px;
+    padding: 20px 0px;
+    border: 4px solid #FFAFE7;
+    border-radius: 39px;
+    background-color: white;
+    text-align: center;
+
+}
+.input-box{
+    width: 100%;
+    height: 180px;
+    padding: 20px 0px;
+    border: 4px solid #FFAFE7;
+    border-radius: 39px;
+    background-color: white;
+    text-align: center;
+
+}
+.create-task{
+    width: 300px;
+}
