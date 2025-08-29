@@ -9,28 +9,46 @@ function updateTime() {
 updateTime();
 setInterval(updateTime, 1000);
 
-// const list = [];
-// function addToList(){
-//     console.log(list);
-//     const item = document.querySelector('.input-box').value;
-//     console.log(item); // whatever the user typed
-//     list.push(item);
-//     document.querySelector('.board').innerHTML = list;
-// }
 
-// addToList()
+// Add Tasks
+const tasks = []; // array to store all items
 
-const list = [];
+function addToList() {
+    const input = document.querySelector('.input-box');
+    const item = input.value.trim();
+    if (item === "") return;
 
-function addToList(){
-    const item = document.querySelector('.input-box').value.trim();
-    if (item === "") return; // don't add empty items
-    list.push(item);
-    document.querySelector('.board').innerHTML = list.join(", ");
-    console.log(list);
+    tasks.push(item); // store task
+    input.value = ""; // clear text area
+
+    const board = document.querySelector('.board');
+    board.innerHTML = ""; // clear before re-rendering
+
+    tasks.forEach(function(task, index) {
+        const div = `
+            <div style='display:flex; justify-content:space-around;' class="board-div">
+                <p>${task}</p>
+                <input type="checkbox"></input>
+            </div>
+        `;
+        board.innerHTML += div; // append HTML to board
+    });
+    console.log(tasks);
 }
-
 document.querySelector('.create-task').addEventListener('click', addToList);
 
 
-// console.log(e);
+
+// Progress Bar
+
+const progress = (tasks.length / totalTasks) * 100;
+document.querySelector('.bar').value = progress;
+
+
+
+
+
+
+
+
+

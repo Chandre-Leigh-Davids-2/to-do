@@ -14,7 +14,9 @@
                 <p class="blocks" id="time">time</p>
             </div>
             <div class="col-lg-5 col-md-6">
-                <div class="blocks">progress bar</div>
+                <div class="blocks">
+                    <progress id="task-progress" max="100"></progress>
+                </div>
             </div>
             <div class="col-lg-3 col-md-9">
                 <div class="blocks"  id="date">date</div>
@@ -24,9 +26,9 @@
             </div>
         </div>
         <div class="row d-flex align-items-center flex-wrap justify-content-center">
-            <div class="col-lg-6">
+            <div class="col-lg-6 board-main">
+                <!-- <div><h1>My Agenda</h1></div> -->
                 <div class="board"></div>
-                <p id="demo">Click me.</p>
             </div>
             <div class="col-lg-6 d-flex align-items-center flex-wrap justify-content-center">
                 <textarea type="text" class="input-box"></textarea>
