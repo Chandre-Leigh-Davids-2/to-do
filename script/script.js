@@ -27,11 +27,13 @@ function addToList() {
     tasks.forEach(function(task, index) {
         const div = `
             <div style='display:flex; justify-content:space-around;' class="board-div">
-                <p>${task}</p>
-                <input type="checkbox"></input>
+                <p class="task-name">${task}</p>
+                <input type="checkbox" class="check-box"></input>
             </div>
         `;
         board.innerHTML += div; // append HTML to board
+        const check = document.querySelector('.check-box')
+        document.querySelector('.checkbox')
     });
     console.log(tasks);
 }
