@@ -38,6 +38,7 @@
     border-radius: 39px;
     background-color: white;
     text-align: center;
+    background-color: pink;
 
 }
 .board-main::-webkit-scrollbar {
