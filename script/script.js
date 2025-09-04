@@ -65,15 +65,23 @@ so essentially p.textContent will be whatever is in the input box that the user 
         div.appendChild(checkbox);
         board.appendChild(div);
     })
+    console.log(tasks.length);
+
+    taskProgress(); // update progress after rendering all tasks
+}
+function taskProgress() {
+    const amountOfTasks = tasks.length;
+    const checkedItems = Math.floor(tasks.filter(task => task.isChecked).length)
+    const amount = amountOfTasks > 0 ? (checkedItems / amountOfTasks) * 100 : 0;
+    console.log(`Progress: ${amount}%`);
 }
 
 document.querySelector('.create-task').addEventListener('click', addToList)
 
 
-// Progress Bar
+// rewrite just the taskProgress() part so it works correctly while keeping the rest of your code exactly the same.
 
-// const progress = (tasks.length / totalTasks) * 100;
-// document.querySelector('.bar').value = progress;
+
 
 
 
